@@ -10,7 +10,8 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 25 95% 53%;
+    /* --primary: 25 95% 53%; */
+    --primary: 186 95% 43%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -22,7 +23,8 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 25 95% 53%;
+    /* --ring: 25 95% 53%; */
+    --ring:189 94% 43%; 
     --radius: 0.5rem;
 
     /* 🎨 Gradient for light mode */
@@ -80,4 +82,12 @@
   .gradient {
     background-image: var(--gradient);
   }
+}
+
+.gradient {
+    background-image: linear-gradient(
+        90deg,
+        #00ff8f 0%,
+        #00a1ff 100%
+      );
 }

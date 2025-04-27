@@ -8,17 +8,29 @@ export function PricingSection() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">Simple, Transparent Pricing</h2>
+        <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
+          Simple, Transparent Pricing
+        </h2>
         <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-          Choose the plan that works best for your business. All plans include our core premium features.
+          Choose the plan that works best for your business. All plans include
+          our core premium features.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingPlans.map((plan) => (
-          <Card key={plan.name} className={`flex flex-col ${plan.featured ? "border-primary shadow-lg" : ""}`}>
+          <Card
+            key={plan.name}
+            className={`flex flex-col ${
+              plan.featured ? "border-primary shadow-lg" : ""
+            }`}
+          >
             <CardHeader>
-              {plan.featured && <div className="mb-2 text-sm font-medium text-primary">Most Popular</div>}
+              {plan.featured && (
+                <div className="mb-2 text-sm font-medium text-primary">
+                  Most Popular
+                </div>
+              )}
               <CardTitle className="text-2xl">{plan.name}</CardTitle>
               <CardDescription>{plan.description}</CardDescription>
             </CardHeader>
@@ -37,7 +49,12 @@ export function PricingSection() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button asChild size="lg" className="w-full" variant={plan.featured ? "default" : "outline"}>
+              <Button
+                asChild
+                size="lg"
+                className="w-full "
+                variant={plan.featured ? "default" : "outline"}
+              >
                 <Link href="#access">Request Access</Link>
               </Button>
             </CardFooter>
@@ -48,14 +65,17 @@ export function PricingSection() {
       <div className="mx-auto max-w-3xl rounded-lg border bg-muted/50 p-6 text-center">
         <h3 className="text-lg font-medium">Need a custom solution?</h3>
         <p className="mt-2 text-muted-foreground">
-          Contact us for custom enterprise plans designed for high-volume studios with specific requirements.
+          Contact us for custom enterprise plans designed for high-volume
+          studios with specific requirements.
         </p>
         <Button variant="link" asChild>
-          <Link href="#access">Contact Sales</Link>
+          <Link href="#access">
+            Contact Sales
+          </Link>
         </Button>
       </div>
     </div>
-  )
+  );
 }
 
 const pricingPlans = [
